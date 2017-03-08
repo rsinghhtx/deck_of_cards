@@ -4,12 +4,36 @@ function deck_o_cards() {
   var values = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace'];
   var suits = ['hearts', 'diamonds', 'clubs', 'spades'];
 
-  var cards = []; // deck
+  var cards = {}; // deck
   var shuffledCards = []; // deck shuffled
 
   // Make 52 card objects and store them in the "cards" array
   // Hint: use 2 for loops
+  //make 2-Ace of hears,diaonds, clubs and spades
 
+
+for (i=0, i<suits.length,i++){
+    for ( j = 0; i < values.length; j++) {
+           card={
+             suit:[i]
+             value:[j]
+           };
+      } card.push(card)
+
+    }
+
+
+shuffledCards = shuffle(cards)
+
+topCard = shuffledCards[0];
+
+
+pokerHand = shuffledCards.slice(0,5)
+
+
+var deck = suits.map(function(x) {
+   return x * 2;
+console.log(cards)
 
   // 2. Shuffle the cards
   // Hint: shuffle function is already defined below
@@ -47,3 +71,19 @@ function shuffle(array) {
 
     return array;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+First we need 52 cards made, by mapping suite to value arrays.
+
+Then add to cards array as objects.
